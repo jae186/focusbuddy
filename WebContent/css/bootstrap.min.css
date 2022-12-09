@@ -1,5 +1,5 @@
 h1 {
-    font-size: 72px;
+    font-size: 40px;
     text-align: center;
     background-color: transparent;
     margin-top: 100px;
@@ -297,4 +297,54 @@ table{
 }
 a{
     text-decoration:none;
+}
+
+/*index.html*/
+.text-box{
+    width:90%;
+    color:black;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    top:110%;
+    left:50%;
+    
+
+}
+.hero-btn{
+    display:inline-block;
+    text-decoration:none;
+    color:#fff;
+    border:1px solid #fff;
+    padding: 12px 34px;
+    font-size:13px;
+    background:#00c2cb;
+    position:relative;
+    cursor:pointer;
+    
+}
+.hero-btn:hover{
+    border:1px solid royalblue;
+    background: azure;
+    color: royalblue;
+    transition:0.5s;
+}
+.users-guide{
+    width:90%;
+    color:#000;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    top:150%;
+    left:50%;
+}
+.admin-guide{
+    width:90%;
+    color:#000;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    top:200%;
+    left:50%;
+
 }
