@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'FocusBuddy'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_601B1987C7F34149A4D69EE7AE3DA450 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CF91C125B45548C7A32F2ED6EC980489 }}
           package: '*.jar'
