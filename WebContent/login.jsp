@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<br><h1>Welcome to FocusBuddy!</h1><hr><br> 
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		</head>
 <head>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href ="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">   
 	<link href ="https://cdn.jsdelivr.net/npm/boxicon@latest/css/boxicon.min.css" rel="stylesheet">  
 <title>Login Screen</title>
 </head>
+<%
+	String userName = (String) session.getAttribute("authenticatedUser");
+%>
 <body>
 	<header>
 		<a href = "index.jsp" class = "logo"><i class = "ri-home-heart-fill"></i><span>FocusBuddy</span></a>
@@ -14,7 +21,7 @@
 					<li><a href="userinfo.jsp">User's Information</a></li>
 					<li><a href="listprod.jsp">Begin Shopping</a></li>
 					<li><a href="logout.jsp">Logout</a></li>
-					<li><a href = "userinfo.jsp">USERNAME</a></li>
+					<li><a href = "userinfo.jsp"><%out.print(userName);%></a></li>
 				</u1>
 
 		<div class = "main">
@@ -47,7 +54,7 @@ if (session.getAttribute("loginMessage") != null)
 	<td><input type="password" name="password" size=10 maxlength="10"></td>
 </tr>
 </table>
-<br/>
+<br/> <br>
 <input class="submit" type="submit" name="Submit2" value="Log In">
 </form>
 

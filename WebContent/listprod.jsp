@@ -5,12 +5,12 @@
 
 <html>
 <head>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href ="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">   
-	<link href ="https://cdn.jsdelivr.net/npm/boxicon@latest/css/boxicon.min.css" rel="stylesheet"> 
 <title>FocusBuddy</title>
-      
+<link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
+<%
+	String userName = (String) session.getAttribute("authenticatedUser");
+%>
 <body>
 	<header>
 		<a href = "index.jsp" class = "logo"><i class = "ri-home-heart-fill"></i><span>FocusBuddy</span></a>
@@ -19,7 +19,7 @@
 					<li><a href="userinfo.jsp">User's Information</a></li>
 					<li><a href="listprod.jsp">Begin Shopping</a></li>
 					<li><a href="logout.jsp">Logout</a></li>
-					<li><a href = "userinfo.jsp">USERNAME</a></li>
+					<li><a href = "userinfo.jsp"><%out.print(userName);%></a></li>
 				</u1>
 
 		<div class = "main">
@@ -32,30 +32,12 @@
 
 <%@ include file="header.jsp" %>
 
-<h2>Browse Products By Category and Search by Product Name:</h2>
+<h2>Browse Products By Category and Search by Product Name:</h2><br>
 
 <form method="get" action="listprod.jsp">
   <p align="left">
   <select size="1" name="categoryName">
   <option>All</option>
-
-<%
-/*
-// Could create category list dynamically - more adaptable, but a little more costly
-try               
-{
-	getConnection();
- 	ResultSet rst = executeQuery("SELECT DISTINCT categoryName FROM Product");
-    while (rst.next()){
-		out.println("<option>"+rst.getString(1)+"</option>");
-	}
-}
-catch (SQLException ex)
-{      
-	out.println(ex);
-}
-*/
-%>
 
   <option>Introverts</option>
   <option>Extroverts</option>
@@ -64,7 +46,7 @@ catch (SQLException ex)
   <input type="text" name="productName" size="50">
   <input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
 </form>
-
+<br>
 <%
 // Colors for different item categories
 HashMap<String,String> colors = new HashMap<String,String>();		// This may be done dynamically as well, a little tricky...
@@ -100,7 +82,7 @@ else if (hasCategoryParam)
 }
 else
 {
-	filter = "<h3>All Products</h3>";
+	filter = "<h3>All Products: </h3>";
 	sql = "SELECT productId, productName, productPrice, categoryName, productImageURL FROM Product P JOIN Category C ON P.categoryId = C.categoryId";
 }
 
@@ -160,4 +142,3 @@ try
 
 </body>
 </html>
-
