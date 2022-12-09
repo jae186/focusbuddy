@@ -15,7 +15,7 @@
 %>
 <body>
 	<header>
-		<a href = "index.html" class = "logo"><i class = "ri-home-heart-fill"></i><span>FocusBuddy</span></a>
+		<a href = "index.jsp" class = "logo"><i class = "ri-home-heart-fill"></i><span>FocusBuddy</span></a>
 		
 				<u1 class="navbar">
 					<li><a href="userinfo.jsp">User's Information</a></li>
@@ -26,7 +26,7 @@
 
 		<div class = "main">
 			<a href="showcart.jsp" class="user"><i class="ri-shopping-cart-fill"></i>Shopping Cart</a>
-			<a href ="login.html" class ="user"><i class ="ri-user-fill"></i>Sign In</a>
+			<a href ="login.jsp" class ="user"><i class ="ri-user-fill"></i>Sign In</a>
 			<a href ="signup.jsp" class ="user">Register</a>
 			
 		</div>
