@@ -64,8 +64,8 @@
         <form method="get" action="delProduct.jsp" class="login-form">
 			<h3>Delete Product</h3><br>
             <%
-            String invalid = request.getParameter("invalid");
-            if (invalid != null)
+            String i = request.getParameter("invalid");
+            if (i != null)
                 out.println("<h3>Invalid information: " + request.getParameter("invalid") + "</h3>");
             %>
             <input type="text" name="name" placeholder="Product Name" required /><br/>
