@@ -7,6 +7,8 @@
 <head>
 <title>FocusBuddy</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link href ="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">   
+<link href ="https://cdn.jsdelivr.net/npm/boxicon@latest/css/boxicon.min.css" rel="stylesheet">  
 </head>
 <%
 	String userName = (String) session.getAttribute("authenticatedUser");
@@ -123,7 +125,7 @@ try
 		String itemCategory = rst.getString(4);
 		String color = (String) colors.get(itemCategory);
 		if (color == null)
-			color = "#FFFFFF";
+			color = "#000";
 		
 		String imageLoca = rst.getString(5);
 			out.println("<td><img src=\""+imageLoca+"\"></td>");

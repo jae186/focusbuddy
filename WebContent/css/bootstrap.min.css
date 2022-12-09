@@ -203,9 +203,11 @@ li{
 .table, .table tr, .table td{
     text-align: center;
     vertical-align: middle;
+    color: #000;
 }
-table{
+.table{
     background-color: azure;
+    align-self: center;
 
 }
 .fa-shopping-cart {
