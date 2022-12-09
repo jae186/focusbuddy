@@ -66,7 +66,7 @@ CREATE TABLE product (
     productId           INT IDENTITY,
     productName         VARCHAR(40),
     productPrice        DECIMAL(10,2),
-    productImageURL     VARCHAR(100),
+    productImageURL     VARCHAR(100) DEFAULT 'https://i.imgur.com/VrMvMuk.png',
     productImage        VARBINARY(MAX),
     productDesc         VARCHAR(1000),
     categoryId          INT,
