@@ -7,6 +7,9 @@
 <title>Checkout Line</title>
 </head>
 <body>
+	<%
+	String userName = (String) session.getAttribute("authenticatedUser");
+	%>
     <header>
 		<a href = "index.jsp" class = "logo"><i class = "ri-home-heart-fill"></i><span>FocusBuddy</span></a>
 		
@@ -14,7 +17,7 @@
 					<li><a href="userinfo.jsp">User's Information</a></li>
 					<li><a href="listprod.jsp">Begin Shopping</a></li>
 					<li><a href="logout.jsp">Logout</a></li>
-					<li><a href = "userinfo.jsp">USERNAME</a></li>
+					<li><a href = "userinfo.jsp"><%out.print(userName);%></a></li>
 				</u1>
 
 		<div class = "main">
@@ -26,13 +29,13 @@
 	</header>
 
 <h1>Enter your customer id to complete the transaction:</h1>
-//checkout with customer id
+ checkout with customer id
 <form method="get" action="order.jsp">
 <input type="text" name="customerId" size="50">
 <input type="submit" value="Submit"><input type="reset" value="Reset">
 </form>
 
-//checkout with payment/shipment info
+checkout with payment/shipment info
 <form method="get" action="order.jsp">
 <input type="text" name="paymentInfo" size="50">
 <input type="submit" value="Submit"><input type="reset" value="Reset">

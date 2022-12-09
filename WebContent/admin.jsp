@@ -36,6 +36,7 @@
 		</div>
 	</header>
 
+<!-- add -->
 <div style="margin:0 auto;text-align:center;display:inline"></div>
 
     <div class="add-prod">
@@ -56,6 +57,46 @@
             <button type="submit" class="sub-button">Add Product</button>
         </form>
     </div>
+
+
+	<!-- delete -->
+	<div style="margin:0 auto;text-align:center;display:inline"></div>
+
+    <div class="del-prod">
+        <form method="get" action="delProduct.jsp" class="login-form">
+			<br><h3>Delete Product</h3><br>
+            <%
+            String i = request.getParameter("invalid");
+            if (i != null)
+                out.println("<h3>Invalid information: " + request.getParameter("invalid") + "</h3>");
+            %>
+            <input type="text" name="name" placeholder="Product Name" required /><br/>
+
+            <br/>
+            <button type="submit" class="sub-button">Delete Product</button>
+        </form>
+    </div>
+
+	<!-- update -->
+	<div style="margin:0 auto;text-align:center;display:inline"></div>
+
+    <div class="update-prod">
+        <form method="get" action="updProduct.jsp" class="login-form">
+			<br><h3>Update Product</h3><br>
+            <%
+            String in = request.getParameter("invalid");
+            if (in != null)
+                out.println("<h3>Invalid information: " + request.getParameter("invalid") + "</h3>");
+            %>
+            <input type="text" name="name" placeholder="Product Name" required /><br/>
+			<input type="number" name="price" placeholder="Product Price" required /><br/>
+            <input type="text" name="desc" placeholder="Product Desc" required /><br/>
+
+            <br/>
+            <button type="submit" class="sub-button">Update Product</button>
+        </form>
+    </div>
+
     </body>
 </html>
 

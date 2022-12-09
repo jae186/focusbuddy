@@ -29,28 +29,48 @@
 		</div>
 	</header>
 	<br/>		
-<h1 align="center">Welcome to FocusBuddy</h1>
-<br/>	<br/>
-<h2 align="center"><a href="login.jsp">Login</a></h2>
-<br/>	
-<h2 align="center"><a href="userinfo.jsp">User's Information</a></h2>
-<br/>	
-<h2 align="center"><a href="listuserorder.jsp">User's Orders</a></h2>
-<br/>	
-<h2 align="center"><a href="edit.jsp">Edit User Information</a></h2>
-<br/>	
-<h2 align="center"><a href="listprod.jsp">Begin Shopping</a></h2>
-<br/>	
-<h2 align="center"><a href="listorder.jsp">List All Orders</a></h2>
-<br/>	
-<h2 align="center"><a href="admin.jsp">Administrators</a></h2>
-<br/>	
-<h2 align="center"><a href="signup.jsp">New User! Sign up here</a></h2>
-<br/>	
-<h2 align="center"><a href="logout.jsp">Log out</a></h2>
+
 <center><img  src = 'https://imageio.forbes.com/specials-images/imageserve/5e020def4e2917000783d582/0x0.jpg?format=jpg&width=1200'></center>
+<div class = "text-box">
+	<hr><h2 >Find your FocusBuddy Today!</h2>
+	<p >Are you struggling to find a study partner that will keep you accountable?<br></br> Find a perfect study parner for all your study sessions!</p>
+	<a href="listprod.jsp" class="hero-btn">Begin Shopping!</a>
+</div>
+
 <br/>	<br/>
-//
+<div class = "users-guide">
+	<hr><h2>User's Menu</h2>
+
+	<h3 align="center"><a href="login.jsp">Login</a></h3>
+	<br/>	
+	<h3 align="center"><a href="signup.jsp">New User! Sign up here</a></h3>
+	<br/>	
+	<h3 align="center"><a href="userinfo.jsp">User's Information</a></h3>
+	<br/>	
+	<h3 align="center"><a href="listuserorder.jsp">User's Orders</a></h3>
+	<br/>	
+	<h3 align="center"><a href="edit.jsp">Edit User Information</a></h3>
+	<br/>
+	<h3 align="center"><a href="logout.jsp">Log out</a></h3>
+	<br/>		
+
+
+
+
+</div>
+
+<div class = "admin-guide">
+	<hr><h2>Admin Menu</h2>	
+	<h3 align="center"><a href="listorder.jsp">List All Orders</a></h3>
+	<br/>	
+	<h3 align="center"><a href="admin.jsp">Administrators</a></h3>
+	<br/>	
+
+
+
+
+</div>
+
 <%
 
 	if (userName != null)
