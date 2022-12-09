@@ -56,6 +56,27 @@
             <button type="submit" class="sub-button">Add Product</button>
         </form>
     </div>
+
+	<div style="margin:0 auto;text-align:center;display:inline"></div>
+
+    <div class="add-prod">
+      <!-- <br><h1>Admin Roles</h1> <hr><br>  -->
+        <form method="get" action="delProduct.jsp" class="login-form">
+			<h3>Delete Product</h3><br>
+            <%
+            String invalid = request.getParameter("invalid");
+            if (invalid != null)
+                out.println("<h3>Invalid information: " + request.getParameter("invalid") + "</h3>");
+            %>
+            <input type="text" name="name" placeholder="Product Name" required /><br/>
+
+            <br/>
+            <button type="submit" class="sub-button">Delete Product</button>
+        </form>
+    </div>
+
+
+
     </body>
 </html>
 
