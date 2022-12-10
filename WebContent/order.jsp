@@ -38,7 +38,7 @@
 	</header>
 
 
-<section id = "cart-container" class="container my-5">
+<section id = "order-container" class="container my-5">
 <% 
 // Get customer id
 String custId = request.getParameter("customerId");
@@ -108,12 +108,12 @@ else
 				String productId = (String) product.get(0);
                 out.print("<tr><td>"+productId+"</td>");
                 out.print("<td>"+product.get(1)+"</td>");
-				out.print("<td align=\"center\">"+product.get(3)+"</td>");
+				out.print("<td>"+product.get(3)+"</td>");
                 String price = (String) product.get(2);
                 double pr = Double.parseDouble(price);
                 int qty = ( (Integer)product.get(3)).intValue();
-				out.print("<td align=\"right\">"+currFormat.format(pr)+"</td>");
-               	out.print("<td align=\"right\">"+currFormat.format(pr*qty)+"</td></tr>");
+				out.print("<td>"+currFormat.format(pr)+"</td>");
+               	out.print("<td >"+currFormat.format(pr*qty)+"</td></tr>");
                 out.println("</tr>");
                 total = total +pr*qty;
 
@@ -125,8 +125,8 @@ else
 				pstmt.setString(4, price);
 				pstmt.executeUpdate();				
         	}
-        	out.println("<tr><td colspan=\"4\" align=\"right\"><b>Order Total</b></td>"
-                       	+"<td aling=\"right\">"+currFormat.format(total)+"</td></tr>");
+        	out.println("<tr><td><b>Order Total</b></td>"
+                       	+"<td>"+currFormat.format(total)+"</td></tr>");
         	out.println("</table>");
 
 			// Update order total
@@ -136,11 +136,11 @@ else
 			pstmt.setInt(2, orderId);			
 			pstmt.executeUpdate();						
 
-			out.println("<h1>Order completed.  Will be shipped soon...</h1>");
-			out.println("<h1>Your order reference number is: "+orderId+"</h1>");
-			out.println("<h1>Shipping to customer: "+custId+" Name: "+custName+"</h1>");
+			out.println("<h3>Order completed.  Will be shipped soon...</h3>");
+			out.println("<h3>Your order reference number is: "+orderId+"</h3>");
+			out.println("<h3>Shipping to customer: "+custId+" Name: "+custName+"</h3>");
 
-			out.println("<h2><a href=\"listprod.jsp\">Return to shopping</a></h2>");
+			
 			
 			// Clear session variables (cart)
 			session.setAttribute("productList", null);
@@ -155,6 +155,10 @@ else
 	}
 }
 %>
+</section>
+<section id ="order-button">
+	<button class="m1-auto"><a href="listprod.jsp">Continue Shopping</a></button>
+
 </section>
 </body>
 </html>

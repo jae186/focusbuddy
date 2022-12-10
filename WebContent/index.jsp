@@ -10,7 +10,7 @@
 	String userName = (String) session.getAttribute("authenticatedUser");
 %>
 <body>
-	<script type ="text/javascript" src = "css/script.js"></script>
+	
 	<header>
 		<a href = "index.jsp" class = "logo"><i class = "ri-home-heart-fill"></i><span>FocusBuddy</span></a>
 		
@@ -34,12 +34,12 @@
 <div class = "text-box">
 	<hr><h2 >Find your FocusBuddy Today!</h2>
 	<p >Are you struggling to find a study partner that will keep you accountable?<br></br> Find a perfect study parner for all your study sessions!</p>
-	<a href="listprod.jsp" class="hero-btn">Begin Shopping!</a>
+	<br><a href="listprod.jsp" class="hero-btn">Begin Shopping!</a><br>
 </div>
 
 <br/>	<br/>
 <div class = "users-guide">
-	<hr><h2>User's Menu</h2>
+	<hr><br><h2>User's Menu</h2><br>
 
 	<h3 align="center"><a href="login.jsp">Login</a></h3>
 	<br/>	
@@ -60,7 +60,7 @@
 </div>
 
 <div class = "admin-guide">
-	<hr><h2>Admin Menu</h2>	
+	<hr><br><h2>Admin Menu</h2>	<br>
 	<h3 align="center"><a href="listorder.jsp">List All Orders</a></h3>
 	<br/>	
 	<h3 align="center"><a href="admin.jsp">Administrators</a></h3>

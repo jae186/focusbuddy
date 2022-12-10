@@ -346,7 +346,101 @@ a{
     position:absolute;
     transform:translate(-50%,-50%);
     text-align: center;
-    top:200%;
+    top:185%;
     left:50%;
 
+}
+
+#order-container table{
+    border-collapse: collapse;
+    width:100%;
+    table-layout:fixed;
+}
+#order-container table thead{
+   font-weight:700 ;
+}
+#order-container table thead td{
+    background-color: #00c2cb;
+    color:azure;
+    border:none;
+    padding:6px 0;
+}
+#order-container table td{
+    border: 1px solid black;
+    text-align: center;
+
+}
+#order-container table td:nth-child(1){
+    width: 100px;
+}
+#order-container table td:nth-child(2),#cart-container table td:nth-child(3){
+    width: 200px;
+}
+#order-container table td:nth-child(4),#cart-container table td:nth-child(5),#cart-container table td:nth-child(6){
+    width:170px;
+}
+#order-container table td tbody image{
+    width:100px;
+    height:80px;
+    object-fit:cover;
+}
+#order-container table tbody i{
+    color:grey;
+}
+
+#order-button button{
+    background-color: #00c2cb;
+    border : none;
+    color:azure;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+
+
+#prod-container table{
+    border-collapse: collapse;
+    width:100%;
+    table-layout:fixed;
+}
+#prod-container table thead{
+   font-weight:700 ;
+}
+#prod-container table thead td{
+    background-color: #00c2cb;
+    color:azure;
+    border:none;
+    padding:6px 0;
+}
+#prod-container table td{
+    border: 1px solid black;
+    text-align: center;
+
+}
+#prod-container table td tbody image{
+    width:100px;
+    height:80px;
+    object-fit:cover;
+}
+
+#prod-button button{
+    background-color: #00c2cb;
+    border : none;
+    color:azure;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
