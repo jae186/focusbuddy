@@ -15,7 +15,7 @@
 		<a href = "index.jsp" class = "logo"><i class = "ri-home-heart-fill"></i><span>FocusBuddy</span></a>
 		
 				<u1 class="navbar">
-					<li><a href="userinfo.jsp">User's Information</a></li>
+					<li><a href="aboutUs.html">About Us</a></li>
 					<li><a href="listprod.jsp">Begin Shopping</a></li>
 					<li><a href="logout.jsp">Logout</a></li>
 					<li><a href = "userinfo.jsp"><%out.print(userName);%></a></li>
